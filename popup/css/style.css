@@ -285,12 +285,18 @@ p {
 .footer{
     display: flex;
     
+    width: 25em;
+
     flex-flow: column;
     align-items: center;
     justify-content: center;    
     
-    margin: 0em 3em 2em 3em;
+    margin: 0em 3em 1em 3em;
     border-top: 1px #b4a7a7 solid;
+}
+
+.f-menu{
+    margin: 0em 3em 3em 0em;
 }
 
 .icons-footer{    
@@ -300,7 +306,7 @@ p {
 
 .icons-footer > a{
     text-decoration: none;
-    padding: 0 0 1em 1em;
+    padding: 0 0 1em 0em;
     color: #575555;
 }
 

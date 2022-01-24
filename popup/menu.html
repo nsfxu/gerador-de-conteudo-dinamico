@@ -5,8 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Dynamic Content Builder</title>
+
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/brands.js"
+        integrity="sha384-xf4z6gHzXeY6YwFJm8AKcD9SSq8TsfF4+UJj1JxzwQHk+VNATxkknGEzmdtYV0w1"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/fontawesome.js"
+        integrity="sha384-dPBGbj4Uoy1OOpM4+aRGfAOc0W37JkROT+3uynUgTHZCHZNMHfGXsmmvYTffZjYO"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -83,6 +91,14 @@
                     <div class="main opcoes">
                         <button id="gerar-doc">Gerar JSON</button>
                     </div>
+
+                    <footer class="footer f-menu">
+                        <div class="icons-footer">
+                            <a href="https://github.com/nsfxu/gerador-de-conteudo-dinamico" target="_blank">
+                                <i class="fab fa-github fa-2x"></i>
+                            </a>
+                        </div>
+                    </footer>
 
                 </div>
             </div>
@@ -172,10 +188,20 @@
             <div class="main opcoes">
                 <button id="gerar-doc-mcs">Gerar JSON</button>
             </div>
-        </div>   
+
+            <footer class="footer f-menu">
+                <div class="icons-footer">
+                    <a href="https://github.com/nsfxu/gerador-de-conteudo-dinamico" target="_blank">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                </div>
+            </footer>
+        </div>        
         
         
-    </div>   
+        
+    </div>    
+    
 
     <div class="json" id="aba-resultado" style="display: none;">
 
@@ -185,8 +211,18 @@
         </div>
 
         <textarea class="resultado" id="resultado" disabled></textarea>
+        
+        <footer class="footer">
+            <div class="icons-footer">
+                <a href="https://github.com/nsfxu/gerador-de-conteudo-dinamico" target="_blank">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+            </div>
+        </footer>
     </div>
 
+    
+    
 </body>
 <script src="js/menuMSS.js"></script>
 <script src="js/menuMCS.js"></script>
