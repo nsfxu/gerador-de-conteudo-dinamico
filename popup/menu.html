@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Content Builder</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <ul>
+            <li><a href="menu.html">Menu</a></li> <!-- Colocar icone de menu -->
+            <li><a href="mensagem.html">Mensagem</a></li> <!-- Colocar icone de texto -->
+        </ul>
+    </header>
+
+    <div class="tabs-container" id="tabs-cont">
+        <input type="radio" name="tabs" class="tabs" id="tab1" checked>
+        <label for="tab1">Menu sem seção</label>
+        <div>
+            <div class="content-box">
+
+                <center>
+                    <h2 class="titulo">Menu sem seção</h2>
+                </center>
+
+                <form name="mss-form">
+                    <div class="inputbox">
+                        <label>Cabeçalho</label>
+                        <input type="text" name="mss-header" id="mss-header">
+                    </div>
+
+                    <div class="inputbox">
+                        <label>Corpo</label>
+                        <input type="text" name="mss-body" id="mss-body">
+                    </div>
+
+                    <div class="inputbox">
+                        <label>Nome do botão</label>
+                        <input type="text" name="mss-btn-name" id="mss-btn-name">
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="main" id="main" style="margin-top: 1em;">
+
+                <center>
+                    <h1 class="titulo">Opções</h1>
+                </center>
+
+                <div class="opcoes">
+
+                    <p>Qtde de opções: <label id="qtde">1</label></p>
+
+                    <div class="button-box">
+                        <button id="add-opcao">Adicionar</button>
+                        <button id="rem-opcao" disabled>Remover</button>
+                    </div>
+
+                    <form name="mss-btn-form">
+                        <div class="opcoes content-box" id="form-opcoes">
+
+                            <div class="box inputbox" id="box-opcao1">
+                                <label>Opção 1</label>
+                                <input type="text" name="opcao1" id="opcao1">
+                            </div>
+
+                            <div class="box inputbox" id="box-desc1">
+                                <label>Descrição 1</label>
+                                <input type="text" name="desc1" id="desc1">
+                            </div>
+                        </div>
+                    </form>   
+                    
+                    <div class="failed-message-box" id="msg-box-mss" style="display: none;">
+                        <label id="msg-mss"></label>
+                    </div>
+
+                    <div class="main opcoes">
+                        <button id="gerar-doc">Gerar JSON</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+
+        <input type="radio" name="tabs" class="tabs" id="tab2">
+        <label for="tab2">Menu com seção</label>
+        <div>
+            <div class="content-box">
+
+                <center>
+                    <h2 class="titulo">Menu com seção</h2>
+                </center>
+
+                <form name="mcs-form">
+                    <div class="inputbox">
+                        <label>Cabeçalho</label>
+                        <input type="text" name="mcs-header" id="mcs-header">
+                    </div>
+
+                    <div class="inputbox">
+                        <label>Corpo</label>
+                        <input type="text" name="mcs-body" id="mcs-body">
+                    </div>
+
+                    <div class="inputbox">
+                        <label>Nome do botão</label>
+                        <input type="text" name="mcs-btn-name" id="mcs-btn-name">
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="main" id="main" style="margin-top: 1em;">
+
+                <center>
+                    <h1 class="titulo">Opções</h1>
+                </center>                
+
+                <div class="opcoes" id="form-opcoes-mcs">
+                    <div class="content-box" id="mcs-section1-form">
+
+                        <form name="mcs-section1-form" id="form-section1">
+
+                            <div class="box inputbox section" id="box-secao1">
+                                <label>Seção 1</label>
+                                <input type="text" name="secao1" id="secao1">
+                            </div>
+
+                            <div class="box inputbox" id="box-opcao1">
+                                <label>Opção 1</label>
+                                <input type="text" name="opcao1" id="opcao1">
+                            </div>
+
+                            <div class="box inputbox desc" id="box-desc1">
+                                <label>Descrição 1</label>
+                                <input type="text" name="desc1" id="desc1">
+                            </div>
+
+                            <!-- Adiciona mais opções -->
+                            <div class="button-box darker" id="btn-box1">
+                                <button id="add-opcao-sec1">Adicionar</button>
+                                <button id="rem-opcao-sec1" disabled>Remover</button>
+                            </div>
+                            
+                        </form>
+
+                    </div>
+                </div>          
+            </div>     
+            
+            <!-- Adiciona mais seções -->
+            <div class="content-box">
+                <p>Qtde de opções: <label id="qtdeO">1</label></p>
+                <p>Qtde de seções: <label id="qtdeS">1</label></p>
+                <div class="button-box darker">
+                    <button id="add-section-mcs">Adicionar</button>
+                    <button id="rem-section-mcs">Remover</button>
+                </div>
+            </div>   
+            
+            <div class="failed-message-box" id="msg-box-mcs" style="display: none;">
+                <label id="msg-mcs"></label>
+            </div>
+
+            <div class="main opcoes">
+                <button id="gerar-doc-mcs">Gerar JSON</button>
+            </div>
+        </div>   
+        
+        
+    </div>   
+
+    <div class="json" id="aba-resultado" style="display: none;">
+
+        <div class="button-box result-box">
+            <button id="btn-copiar">Copiar</button>
+            <a href="menu.html">Voltar</a>
+        </div>
+
+        <textarea class="resultado" id="resultado" disabled></textarea>
+    </div>
+
+</body>
+<script src="js/menuMSS.js"></script>
+<script src="js/menuMCS.js"></script>
+<script src="js/gerar_menu.js"></script>
+<script src="js/resultado.js"></script>
+
+</html>

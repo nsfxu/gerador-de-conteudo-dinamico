@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Content Builder</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <header class="navbar">
+        <ul>
+            <li><a href="menu.html">Menu</a></li> <!-- Colocar icone de menu -->
+            <li><a href="mensagem.html">Mensagem</a></li> <!-- Colocar icone de texto -->
+        </ul>
+    </header>
+
+    <div class="tabs-container" id="tabs-cont">
+        <input type="radio" name="tabs" class="tabs" id="tab1" checked>
+        <label for="tab1">Mensagem</label>
+        <div>
+            <div class="content-box">
+
+                <center>
+                    <h2 class="titulo">Mensagem</h2>
+                </center>
+
+                <form name="txt-form">
+                    <div class="inputbox">
+                        <label>Cabeçalho</label>
+                        <input type="text" name="text-header" id="text-header">
+                    </div>
+
+                    <div class="inputbox">
+                        <label>Corpo</label>
+                        <input type="text" name="text-body" id="text-body">
+                    </div>
+
+                    <div class="inputbox">
+                        <label>Rodapé</label>
+                        <input type="text" name="text-footer" id="text-footer">
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+        <input type="radio" name="tabs" class="tabs" id="tab2">
+        <label for="tab2">Imagem</label>
+        <div>
+            <div class="content-box">
+
+                <center>
+                    <h2 class="titulo">Imagem</h2>
+                </center>
+
+                <form name="img-form">
+
+                    <div class="inputbox">
+                        <label>URL da imagem</label>
+                        <input type="text" name="img-url" id="img-url">
+                    </div>
+
+                    <div class="inputbox">
+                        <label>Corpo</label>
+                        <input type="text" name="img-body" id="img-body">
+                    </div>
+
+                    <div class="inputbox">
+                        <label>Rodapé</label>
+                        <input type="text" name="img-footer" id="img-footer">
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+        <input type="radio" name="tabs" class="tabs" id="tab3">
+        <label for="tab3">Vídeo</label>
+        <div>
+            <div class="content-box">
+
+                <center>
+                    <h2 class="titulo">Vídeo</h2>
+                </center>
+
+                <form name="vid-form">
+                    <div class="inputbox">
+                        <label>URL do vídeo</label>
+                        <input type="text" name="vid-url" id="vid-url">
+                    </div>
+
+                    <div class="inputbox">
+                        <label>Corpo</label>
+                        <input type="text" name="vid-body" id="vid-body">
+                    </div>
+
+                    <div class="inputbox">
+                        <label>Rodapé</label>
+                        <input type="text" name="vid-footer" id="vid-footer">
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="main" id="main">
+
+        <center>
+            <h1 class="titulo">Botões</h1>
+        </center>
+
+        <div class="botoes">
+
+            <p>Qtde de botões: <label id="qtde">1</label></p>
+
+            <div class="button-box">
+                <button id="add-botao">Adicionar</button>
+                <button id="rem-botao" disabled>Remover</button>
+            </div>
+
+            <form name="btn-form">
+                <div class="botoes content-box" id="form-botoes">
+                    <div class="box inputbox" id="box-botao${qtde}">
+                        <label>Botão 1</label>
+                        <input type="text" name="botao1" id="botao1">
+                    </div>
+                </div>
+            </form>
+
+            <div class="failed-message-box" id="msg-box" style="display: none;">
+                <label id="msg"></label>
+            </div>
+
+            <center><button id="gerar-doc" style="margin:auto">Gerar JSON</button></center>
+
+
+
+        </div>
+    </div>
+
+    <div class="json" id="aba-resultado" style="display: none;">
+
+        <div class="button-box result-box">
+            <button id="btn-copiar">Copiar</button>
+            <a href="mensagem.html">Voltar</a>
+        </div>
+
+        <textarea class="resultado" id="resultado" disabled> {
+                "recipient_type": "individual",
+                "type": "interactive",
+                "interactive": {
+                    "type": "button",
+                    "header": {
+                        "type": "text",
+                        "text": "<Titulo da mensagem>"
+                    },
+                    "body": {
+                        "text": "<Corpo da mensagem>"
+                    },
+                    "footer": {
+                        "text": "<Footer da mensagem>"
+                    },
+                    "action": {
+                        "buttons":[
+                            {
+                                "type": "reply",
+                                "reply": {
+                                    "id": "botao1",
+                                    "title": "Opção 1" 
+                                }
+                            },
+                            {
+                                "type": "reply",
+                                "reply": {
+                                    "id": "botao2",
+                                    "title": "Opção 2" 
+                                }
+                            }
+                        ] 
+                    }
+                }
+            }</textarea>
+
+        
+    </div>
+
+</body>
+
+<script src="js/botoes.js"></script>
+<script src="js/mensagem.js"></script>
+<script src="js/resultado.js"></script>
+
+</html>
