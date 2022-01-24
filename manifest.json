@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Gerador de Conteúdo Dinâmico",
-    "description": "Essa extensão simples te ajuda a criar conteúdos dinâmicos sem precisar editar o documento JSON!",
+    "description": "",
     "version": "1.0",
     "content_scripts": [
         {
@@ -9,9 +9,11 @@
             "all_frames": true,
             "js": ["main.js"]            
         }
-    ], 
+    ],
     "browser_action": {
         "default_popup": "popup/index.html",
         "default_title": "Gerador de Conteúdo Dinâmico"
-    }
+    },
+    "content_security_policy": "script-src 'self' https://use.fontawesome.com; object-src 'self'"
+
 }

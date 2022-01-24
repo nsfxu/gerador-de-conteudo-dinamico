@@ -282,6 +282,33 @@ p {
     background-color: #f1f1f1;
 }
 
+.footer{
+    display: flex;
+    
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;    
+    
+    margin: 0em 3em 2em 3em;
+    border-top: 1px #b4a7a7 solid;
+}
+
+.icons-footer{    
+    padding-top: 1em;
+    color: #b4a7a7;
+}
+
+.icons-footer > a{
+    text-decoration: none;
+    padding: 0 0 1em 1em;
+    color: #575555;
+}
+
+.icons-footer > a:hover{
+    text-decoration: none;
+    color: black;
+    cursor: unset;
+}
 
 /* ***************** */
 /* Container de ABAS */
