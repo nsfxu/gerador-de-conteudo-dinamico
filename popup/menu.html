@@ -38,7 +38,7 @@
                 <form name="mss-form">
                     <div class="inputbox">
                         <label>Cabeçalho</label>
-                        <input type="text" name="mss-header" id="mss-header">
+                        <input type="text" name="mss-header" id="mss-header" maxlength="60">
                     </div>
 
                     <div class="inputbox">
@@ -48,7 +48,7 @@
 
                     <div class="inputbox">
                         <label>Nome do botão</label>
-                        <input type="text" name="mss-btn-name" id="mss-btn-name">
+                        <input type="text" name="mss-btn-name" id="mss-btn-name" maxlength="20">
                     </div>
                 </form>
 
@@ -74,16 +74,16 @@
 
                             <div class="box inputbox" id="box-opcao1">
                                 <label>Opção 1</label>
-                                <input type="text" name="opcao1" id="opcao1">
+                                <input type="text" name="opcao1" id="opcao1" maxlength="24">
                             </div>
 
                             <div class="box inputbox" id="box-desc1">
                                 <label>Descrição 1</label>
-                                <input type="text" name="desc1" id="desc1">
+                                <input type="text" name="desc1" id="desc1" maxlength="72">
                             </div>
                         </div>
-                    </form>   
-                    
+                    </form>
+
                     <div class="failed-message-box" id="msg-box-mss" style="display: none;">
                         <label id="msg-mss"></label>
                     </div>
@@ -103,7 +103,7 @@
                 </div>
             </div>
         </div>
-        
+
 
         <input type="radio" name="tabs" class="tabs" id="tab2">
         <label for="tab2">Menu com seção</label>
@@ -117,7 +117,7 @@
                 <form name="mcs-form">
                     <div class="inputbox">
                         <label>Cabeçalho</label>
-                        <input type="text" name="mcs-header" id="mcs-header">
+                        <input type="text" name="mcs-header" id="mcs-header" maxlength="60">
                     </div>
 
                     <div class="inputbox">
@@ -127,7 +127,7 @@
 
                     <div class="inputbox">
                         <label>Nome do botão</label>
-                        <input type="text" name="mcs-btn-name" id="mcs-btn-name">
+                        <input type="text" name="mcs-btn-name" id="mcs-btn-name" maxlength="20">
                     </div>
                 </form>
 
@@ -137,7 +137,7 @@
 
                 <center>
                     <h1 class="titulo">Opções</h1>
-                </center>                
+                </center>
 
                 <div class="opcoes" id="form-opcoes-mcs">
                     <div class="content-box" id="mcs-section1-form">
@@ -146,17 +146,17 @@
 
                             <div class="box inputbox section" id="box-secao1">
                                 <label>Seção 1</label>
-                                <input type="text" name="secao1" id="secao1">
+                                <input type="text" name="secao1" id="secao1" maxlength="24">
                             </div>
 
                             <div class="box inputbox" id="box-opcao1">
                                 <label>Opção 1</label>
-                                <input type="text" name="opcao1" id="opcao1">
+                                <input type="text" name="opcao1" id="opcao1" maxlength="24">
                             </div>
 
                             <div class="box inputbox desc" id="box-desc1">
                                 <label>Descrição 1</label>
-                                <input type="text" name="desc1" id="desc1">
+                                <input type="text" name="desc1" id="desc1" maxlength="72">
                             </div>
 
                             <!-- Adiciona mais opções -->
@@ -164,13 +164,13 @@
                                 <button id="add-opcao-sec1">Adicionar</button>
                                 <button id="rem-opcao-sec1" disabled>Remover</button>
                             </div>
-                            
+
                         </form>
 
                     </div>
-                </div>          
-            </div>     
-            
+                </div>
+            </div>
+
             <!-- Adiciona mais seções -->
             <div class="content-box">
                 <p>Qtde de opções: <label id="qtdeO">1</label></p>
@@ -179,8 +179,8 @@
                     <button id="add-section-mcs">Adicionar</button>
                     <button id="rem-section-mcs">Remover</button>
                 </div>
-            </div>   
-            
+            </div>
+
             <div class="failed-message-box" id="msg-box-mcs" style="display: none;">
                 <label id="msg-mcs"></label>
             </div>
@@ -196,12 +196,12 @@
                     </a>
                 </div>
             </footer>
-        </div>        
-        
-        
-        
-    </div>    
-    
+        </div>
+
+
+
+    </div>
+
 
     <div class="json" id="aba-resultado" style="display: none;">
 
@@ -211,7 +211,7 @@
         </div>
 
         <textarea class="resultado" id="resultado" disabled></textarea>
-        
+
         <footer class="footer">
             <div class="icons-footer">
                 <a href="https://github.com/nsfxu/gerador-de-conteudo-dinamico" target="_blank">
@@ -221,8 +221,8 @@
         </footer>
     </div>
 
-    
-    
+
+
 </body>
 <script src="js/menuMSS.js"></script>
 <script src="js/menuMCS.js"></script>

@@ -12,12 +12,12 @@
         }
         else if (document.getElementById("tab3").checked == true) {
             validaAbaVideo();
-        }      
+        }
 
         return false;
     });
 
-    function validaAbaVideo(){
+    function validaAbaVideo() {
 
         var url = document.forms["vid-form"]["vid-url"].value;
         var body = document.forms["vid-form"]["vid-body"].value;
@@ -28,8 +28,13 @@
             return false;
         }
 
-        if(isVazio(body)){
+        if (isVazio(body)) {
             msgErro("O corpo da mensagem está vazio.");
+            return false;
+        }
+
+        if(footer.length > 60){
+            msgErro("O rodapé da mensagem só pode ter no máx. 60 caracteres.")
             return false;
         }
 
@@ -39,6 +44,9 @@
             if (document.forms["btn-form"][`botao${index}`].value == "") {
                 msgErro(`O botão ${index} está vazio.`);
                 return false;
+            } else if (document.forms["btn-form"][`botao${index}`].value.length > 20) {
+                msgErro(`O botão ${index} só pode ter no máx. 20 caracteres.`);
+                return false;
             }
         }
 
@@ -46,7 +54,7 @@
         exibeResultado(montaJSONvid(url, body, footer, qtde));
     }
 
-    function validaAbaImagem(){
+    function validaAbaImagem() {
 
         var url = document.forms["img-form"]["img-url"].value;
         var body = document.forms["img-form"]["img-body"].value;
@@ -57,8 +65,13 @@
             return false;
         }
 
-        if(isVazio(body)){
+        if (isVazio(body)) {
             msgErro("O corpo da mensagem está vazio.");
+            return false;
+        }
+
+        if(footer.length > 60){
+            msgErro("O rodapé da mensagem só pode ter no máx. 60 caracteres.")
             return false;
         }
 
@@ -68,6 +81,9 @@
             if (document.forms["btn-form"][`botao${index}`].value == "") {
                 msgErro(`O botão ${index} está vazio.`);
                 return false;
+            } else if (document.forms["btn-form"][`botao${index}`].value.length > 20) {
+                msgErro(`O botão ${index} só pode ter no máx. 20 caracteres.`);
+                return false;
             }
         }
 
@@ -75,7 +91,7 @@
         exibeResultado(montaJSONimg(url, body, footer, qtde));
     }
 
-    function validaAbaMensagem(){
+    function validaAbaMensagem() {
 
         var header = document.forms["txt-form"]["text-header"].value;
         var body = document.forms["txt-form"]["text-body"].value;
@@ -86,11 +102,24 @@
             return false;
         }
 
+        if(header.length > 60){
+            msgErro("O cabeçalho da mensagem só pode ter no máx. 60 caracteres.")
+            return false;
+        }
+
+        if(footer.length > 60){
+            msgErro("O rodapé da mensagem só pode ter no máx. 60 caracteres.")
+            return false;
+        }
+
         var qtde = parseInt(document.getElementById("qtde").innerText);
 
         for (let index = 1; index <= qtde; index++) {
             if (document.forms["btn-form"][`botao${index}`].value == "") {
                 msgErro(`O botão ${index} está vazio.`);
+                return false;
+            } else if (document.forms["btn-form"][`botao${index}`].value.length > 20) {
+                msgErro(`O botão ${index} só pode ter no máx. 20 caracteres.`);
                 return false;
             }
         }
@@ -264,7 +293,7 @@
         var jsonBonitinho = JSON.stringify(obj, undefined, 4)
 
         document.getElementById("resultado").value = jsonBonitinho;
-    }    
+    }
 
     function msgErro(texto) {
         document.getElementById("msg-box").style.display = 'flex';

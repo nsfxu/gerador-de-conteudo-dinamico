@@ -53,19 +53,19 @@
         }
 
         return false;
-    });
+    });        
 
     function adicionarOpcao(qtde) {
 
         var html = `
             <div class="box inputbox" id="box-opcao${qtde}"> 
                 <label>Opção ${qtde}</label> 
-                <input type="text" name="opcao${qtde}" id="opcao${qtde}"> 
+                <input type="text" name="opcao${qtde}" id="opcao${qtde}" maxlength="24"> 
             </div>
             
             <div class="box inputbox descricao" id="box-desc${qtde}">
                 <label>Descrição ${qtde}</label>
-                <input type="text" name="desc${qtde}" id="desc${qtde}">
+                <input type="text" name="desc${qtde}" id="desc${qtde}" maxlength="72">
             </div>
             `;
 

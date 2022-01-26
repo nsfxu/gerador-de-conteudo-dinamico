@@ -72,17 +72,17 @@
 
                         <div class="box inputbox section" id="box-secao${qtdeS}">
                             <label>Seção ${qtdeS}</label>
-                            <input type="text" name="secao${qtdeS}" id="secao${qtdeS}">
+                            <input type="text" name="secao${qtdeS}" id="secao${qtdeS}" maxlength="24">
                         </div>
 
                         <div class="box inputbox" id="box-opcao${qtdeO}">
                             <label>Opção ${qtdeO}</label>
-                            <input type="text" name="opcao${qtdeO}" id="opcao${qtdeO}">
+                            <input type="text" name="opcao${qtdeO}" id="opcao${qtdeO}" maxlength="24">
                         </div>
 
                         <div class="box inputbox desc" id="box-desc${qtdeO}">
                             <label>Descrição ${qtdeO}</label>
-                            <input type="text" name="desc${qtdeO}" id="desc${qtdeO}">
+                            <input type="text" name="desc${qtdeO}" id="desc${qtdeO}" maxlength="72">
                         </div> `;
 
         if (qtdeO == 10) {
@@ -205,12 +205,12 @@
         var html = `
             <div class="box inputbox" id="box-opcao${qtdeO}"> 
                 <label>Opção ${qtdeO}</label> 
-                <input type="text" name="opcao${qtdeO}" id="opcao${qtdeO}"> 
+                <input type="text" name="opcao${qtdeO}" id="opcao${qtdeO}" maxlength="24"> 
             </div>
             
             <div class="box inputbox descricao" id="box-desc${qtdeO}">
                 <label>Descrição ${qtdeO}</label>
-                <input type="text" name="desc${qtdeO}" id="desc${qtdeO}">
+                <input type="text" name="desc${qtdeO}" id="desc${qtdeO}" maxlength="72">
             </div>
             `;
 

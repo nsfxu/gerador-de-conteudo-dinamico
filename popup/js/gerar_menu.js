@@ -41,12 +41,38 @@
 
             form.forEach(
                 function (currentValue, currentIndex) {
+
+                    // verifica se a opção/seção está vazia
                     if (isVazio(currentValue.value)) {
                         if (currentValue.name.includes("secao")) {
                             msgErroMCS(`A seção ${currentValue.name.slice(5, 6)} está vazia.`);
                             erro = true;
                         } else if (currentValue.name.includes(`opcao`)) {
                             msgErroMCS(`A opção ${currentValue.name.slice(5, 6)} está vazia.`);
+                            erro = true;
+                        }
+                    } 
+                    
+                    // verifica se a opção tem mais de 24 chrs
+                    if(currentValue.name.includes('opcao')){
+                        if(currentValue.value.length > 24){
+                            msgErroMCS(`A opção ${currentValue.name.slice(5, 6)} só pode ter no máximo 24 caracteres.`)
+                            erro = true;
+                        }
+                    }
+
+                    // verifica se a descrição tem mais de 72 chrs
+                    if(currentValue.name.includes('desc')){
+                        if(currentValue.value.length > 72){
+                            msgErroMCS(`A descrição ${currentValue.name.slice(5, 6)} só pode ter no máximo 72 caracteres.`)
+                            erro = true;
+                        }
+                    }
+
+                    // verifica se a seção tem mais de 24 chrs
+                    if(currentValue.name.includes('secao')){
+                        if(currentValue.value.length > 24){
+                            msgErroMCS(`A seção ${currentValue.name.slice(5, 6)} só pode ter no máximo 24 caracteres.`)
                             erro = true;
                         }
                     }
@@ -156,11 +182,31 @@
             return false;
         }
 
+        if(header.length > 60){
+            msgErroMSS("O cabeçalho só pode ter no máximo 60 caracteres.")
+            return false;
+        }
+
+        if(btnName.length > 20){
+            msgErroMSS("O nome do botão só pode ter no máximo 20 caracteres.")
+            return false;
+        }
+
         var qtde = parseInt(document.getElementById("qtde").innerText);
 
         for (let index = 1; index <= qtde; index++) {
+
+            // verifica se a opção está vazia e se ela tem mais de 24 caracteres
             if (document.forms["mss-btn-form"][`opcao${index}`].value == "") {
-                msgErroMSS(`O botão ${index} está vazio.`);
+                msgErroMSS(`O opção ${index} está vazia.`);
+                return false;
+            } else if (document.forms["mss-btn-form"][`opcao${index}`].value.length > 24) {
+                msgErroMSS(`O opção ${index} só pode ter no máximo 24 caracteres.`);
+                return false;
+            }
+            // verifica se a descrição tem mais de 72 caracteres
+            if (document.forms["mss-btn-form"][`desc${index}`].value.length > 72) {
+                msgErroMSS(`O descrição ${index} só pode ter no máximo 72 caracteres.`);
                 return false;
             }
         }

@@ -38,7 +38,7 @@
                 <form name="txt-form">
                     <div class="inputbox">
                         <label>Cabeçalho</label>
-                        <input type="text" name="text-header" id="text-header">
+                        <input type="text" name="text-header" id="text-header" maxlength="60">
                     </div>
 
                     <div class="inputbox">
@@ -48,7 +48,7 @@
 
                     <div class="inputbox">
                         <label>Rodapé</label>
-                        <input type="text" name="text-footer" id="text-footer">
+                        <input type="text" name="text-footer" id="text-footer" maxlength="60">
                     </div>
                 </form>
 
@@ -68,7 +68,7 @@
 
                     <div class="inputbox">
                         <label>URL da imagem</label>
-                        <input type="text" name="img-url" id="img-url">
+                        <input type="text" name="img-url" id="img-url" maxlength="60">
                     </div>
 
                     <div class="inputbox">
@@ -78,7 +78,7 @@
 
                     <div class="inputbox">
                         <label>Rodapé</label>
-                        <input type="text" name="img-footer" id="img-footer">
+                        <input type="text" name="img-footer" id="img-footer" maxlength="60">
                     </div>
 
                 </form>
@@ -98,7 +98,7 @@
                 <form name="vid-form">
                     <div class="inputbox">
                         <label>URL do vídeo</label>
-                        <input type="text" name="vid-url" id="vid-url">
+                        <input type="text" name="vid-url" id="vid-url" maxlength="60">
                     </div>
 
                     <div class="inputbox">
@@ -108,7 +108,7 @@
 
                     <div class="inputbox">
                         <label>Rodapé</label>
-                        <input type="text" name="vid-footer" id="vid-footer">
+                        <input type="text" name="vid-footer" id="vid-footer" maxlength="60">
                     </div>
                 </form>
 
@@ -136,7 +136,7 @@
                 <div class="botoes content-box" id="form-botoes">
                     <div class="box inputbox" id="box-botao${qtde}">
                         <label>Botão 1</label>
-                        <input type="text" name="botao1" id="botao1">
+                        <input type="text" name="botao1" id="botao1" maxlength="20">
                     </div>
                 </div>
             </form>
@@ -147,9 +147,8 @@
 
             <center><button id="gerar-doc">Gerar JSON</button></center>
 
-
-
         </div>
+
     </div>
 
     <div class="json" id="aba-resultado" style="display: none;">
@@ -159,42 +158,7 @@
             <a href="mensagem.html">Voltar</a>
         </div>
 
-        <textarea class="resultado" id="resultado" disabled> {
-                "recipient_type": "individual",
-                "type": "interactive",
-                "interactive": {
-                    "type": "button",
-                    "header": {
-                        "type": "text",
-                        "text": "<Titulo da mensagem>"
-                    },
-                    "body": {
-                        "text": "<Corpo da mensagem>"
-                    },
-                    "footer": {
-                        "text": "<Footer da mensagem>"
-                    },
-                    "action": {
-                        "buttons":[
-                            {
-                                "type": "reply",
-                                "reply": {
-                                    "id": "botao1",
-                                    "title": "Opção 1" 
-                                }
-                            },
-                            {
-                                "type": "reply",
-                                "reply": {
-                                    "id": "botao2",
-                                    "title": "Opção 2" 
-                                }
-                            }
-                        ] 
-                    }
-                }
-            }</textarea>
-
+        <textarea class="resultado" id="resultado" disabled></textarea>
 
     </div>
 

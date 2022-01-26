@@ -55,7 +55,7 @@
         var html = `
             <div class="box inputbox" id="box-botao${qtde}"> 
                 <label>Botão ${qtde}</label> 
-                <input type="text" name="botao${qtde}" id="botao${qtde}"> 
+                <input type="text" name="botao${qtde}" id="botao${qtde}" maxlength="20"> 
             </div>`;
 
         document.getElementById("form-botoes").insertAdjacentHTML('beforeend', html)
