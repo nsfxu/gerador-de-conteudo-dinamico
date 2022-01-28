@@ -16,16 +16,12 @@
         integrity="sha384-dPBGbj4Uoy1OOpM4+aRGfAOc0W37JkROT+3uynUgTHZCHZNMHfGXsmmvYTffZjYO"
         crossorigin="anonymous"></script>
         <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>    
-
 </head>
 
 <body>
-    <header class="navbar">
-        <ul>
-            <li><a href="menu.html">Menu</a></li> <!-- Colocar icone de menu -->
-            <li><a href="mensagem.html">Mensagem</a></li> <!-- Colocar icone de texto -->
-        </ul>
-    </header>
+
+    <!-- Inclue a navbar -->
+    <script src="./inc/navbar.js"></script>
 
     <div class="tabs-container" id="tabs-cont">
         <input type="radio" name="tabs" class="tabs" id="tab1" checked>
@@ -41,17 +37,26 @@
 
                 <form name="mss-form">
                     <div class="inputbox">
-                        <label>Cabeçalho</label>
+                        <div class="title" id="h-menuT">
+                            Título
+                            <i class="far fa-question-circle primaria"></i>
+                        </div>
                         <input type="text" name="mss-header" id="mss-header" maxlength="60">
                     </div>
 
                     <div class="inputbox">
-                        <label>Corpo</label>
+                        <div class="title" id="h-menuC">
+                            Corpo
+                            <i class="far fa-question-circle primaria"></i>
+                        </div>
                         <input type="text" name="mss-body" id="mss-body">
                     </div>
 
                     <div class="inputbox">
-                        <label>Nome do botão</label>
+                        <div class="title" id="h-menuBtn">
+                            Nome do botão
+                            <i class="far fa-question-circle primaria"></i>
+                        </div>
                         <input type="text" name="mss-btn-name" id="mss-btn-name" maxlength="20">
                     </div>
                 </form>
@@ -77,12 +82,18 @@
                         <div class="opcoes content-box" id="form-opcoes">
 
                             <div class="box inputbox" id="box-opcao1">
-                                <label>Opção 1</label>
+                                <div class="title" id="h-menuO">
+                                    Opção 1
+                                    <i class="far fa-question-circle primaria"></i>
+                                </div>
                                 <input type="text" name="opcao1" id="opcao1" maxlength="24">
                             </div>
 
                             <div class="box inputbox" id="box-desc1">
-                                <label>Descrição 1</label>
+                                <div class="title" id="h-menuD">
+                                    Descrição 1
+                                    <i class="far fa-question-circle primaria"></i>
+                                </div>
                                 <input type="text" name="desc1" id="desc1" maxlength="72">
                             </div>
                         </div>
@@ -96,13 +107,8 @@
                         <button id="gerar-doc">Gerar JSON</button>
                     </div>
 
-                    <footer class="footer f-menu">
-                        <div class="icons-footer">
-                            <a href="https://github.com/nsfxu/gerador-de-conteudo-dinamico" target="_blank">
-                                <i class="fab fa-github fa-2x"></i>
-                            </a>
-                        </div>
-                    </footer>
+                    <!-- Inclue rodapé -->
+                    <script src="./inc/footerMenu.js"></script>
 
                 </div>
             </div>
@@ -122,17 +128,26 @@
 
                 <form name="mcs-form">
                     <div class="inputbox">
-                        <label>Cabeçalho</label>
+                        <div class="title" id="h-menuT">
+                            Título
+                            <i class="far fa-question-circle primaria"></i>
+                        </div>
                         <input type="text" name="mcs-header" id="mcs-header" maxlength="60">
                     </div>
 
                     <div class="inputbox">
-                        <label>Corpo</label>
+                        <div class="title" id="h-menuC">
+                            Corpo
+                            <i class="far fa-question-circle primaria"></i>
+                        </div>
                         <input type="text" name="mcs-body" id="mcs-body">
                     </div>
 
                     <div class="inputbox">
-                        <label>Nome do botão</label>
+                        <div class="title" id="h-menuBtn">
+                            Nome do botão
+                            <i class="far fa-question-circle primaria"></i>
+                        </div>
                         <input type="text" name="mcs-btn-name" id="mcs-btn-name" maxlength="20">
                     </div>
                 </form>
@@ -151,17 +166,26 @@
                         <form name="mcs-section1-form" id="form-section1">
 
                             <div class="box inputbox section" id="box-secao1">
-                                <label>Seção 1</label>
+                                <div class="title" id="h-menuS">
+                                    Seção 1
+                                    <i class="far fa-question-circle primaria"></i>
+                                </div>
                                 <input type="text" name="secao1" id="secao1" maxlength="24">
                             </div>
 
                             <div class="box inputbox" id="box-opcao1">
-                                <label>Opção 1</label>
+                                <div class="title" id="h-menuO">
+                                    Opção 1
+                                    <i class="far fa-question-circle primaria"></i>
+                                </div>
                                 <input type="text" name="opcao1" id="opcao1" maxlength="24">
                             </div>
 
                             <div class="box inputbox desc" id="box-desc1">
-                                <label>Descrição 1</label>
+                                <div class="title" id="h-menuD">
+                                    Descrição 1
+                                    <i class="far fa-question-circle primaria"></i>
+                                </div>
                                 <input type="text" name="desc1" id="desc1" maxlength="72">
                             </div>
 
@@ -195,13 +219,9 @@
                 <button id="gerar-doc-mcs">Gerar JSON</button>
             </div>
 
-            <footer class="footer f-menu">
-                <div class="icons-footer">
-                    <a href="https://github.com/nsfxu/gerador-de-conteudo-dinamico" target="_blank">
-                        <i class="fab fa-github fa-2x"></i>
-                    </a>
-                </div>
-            </footer>
+            <!-- Inclue rodapé -->
+            <script src="./inc/footerMenu.js"></script>
+
         </div>
 
 
@@ -218,13 +238,8 @@
 
         <textarea class="resultado" id="resultado" disabled></textarea>
 
-        <footer class="footer">
-            <div class="icons-footer">
-                <a href="https://github.com/nsfxu/gerador-de-conteudo-dinamico" target="_blank">
-                    <i class="fab fa-github fa-2x"></i>
-                </a>
-            </div>
-        </footer>
+        <!-- Inclue rodapé -->
+        <script src="./inc/footer.js"></script>
     </div>
 
 

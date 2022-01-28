@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "Gerador de Conteúdo Dinâmico",
     "description": "",
-    "version": "1.3",
+    "version": "1.3.5",
     "content_scripts": [
         {
             "matches": ["https://*/*/*/*/templates/builder/"],

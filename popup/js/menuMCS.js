@@ -71,17 +71,26 @@
                 <form name="mcs-section${qtdeS}-form" id="form-section${qtdeS}">
 
                         <div class="box inputbox section" id="box-secao${qtdeS}">
-                            <label>Seção ${qtdeS}</label>
+                            <div class="title" id="h-menuS">
+                                Seção ${qtdeO}
+                                <i class="far fa-question-circle primaria"></i>
+                            </div>
                             <input type="text" name="secao${qtdeS}" id="secao${qtdeS}" maxlength="24">
                         </div>
 
                         <div class="box inputbox" id="box-opcao${qtdeO}">
-                            <label>Opção ${qtdeO}</label>
+                            <div class="title" id="h-menuO">
+                                Opção ${qtdeO}
+                                <i class="far fa-question-circle primaria"></i>
+                            </div>
                             <input type="text" name="opcao${qtdeO}" id="opcao${qtdeO}" maxlength="24">
                         </div>
 
                         <div class="box inputbox desc" id="box-desc${qtdeO}">
-                            <label>Descrição ${qtdeO}</label>
+                            <div class="title" id="h-menuD">
+                                Descrição ${qtdeO}
+                                <i class="far fa-question-circle primaria"></i>
+                            </div>
                             <input type="text" name="desc${qtdeO}" id="desc${qtdeO}" maxlength="72">
                         </div> `;
 
@@ -204,12 +213,18 @@
 
         var html = `
             <div class="box inputbox" id="box-opcao${qtdeO}"> 
-                <label>Opção ${qtdeO}</label> 
+                <div class="title" id="h-menuO">
+                    Opção ${qtdeO}
+                    <i class="far fa-question-circle primaria"></i>
+                </div>
                 <input type="text" name="opcao${qtdeO}" id="opcao${qtdeO}" maxlength="24"> 
             </div>
             
             <div class="box inputbox descricao" id="box-desc${qtdeO}">
-                <label>Descrição ${qtdeO}</label>
+                <div class="title" id="h-menuD">
+                    Descrição ${qtdeO}
+                    <i class="far fa-question-circle primaria"></i>
+                </div>
                 <input type="text" name="desc${qtdeO}" id="desc${qtdeO}" maxlength="72">
             </div>
             `;

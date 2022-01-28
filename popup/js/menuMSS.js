@@ -59,12 +59,18 @@
 
         var html = `
             <div class="box inputbox" id="box-opcao${qtde}"> 
-                <label>Opção ${qtde}</label> 
+                <div class="title" id="h-menuO">
+                    Opção ${qtde}
+                    <i class="far fa-question-circle primaria"></i>
+                </div>
                 <input type="text" name="opcao${qtde}" id="opcao${qtde}" maxlength="24"> 
             </div>
             
             <div class="box inputbox descricao" id="box-desc${qtde}">
-                <label>Descrição ${qtde}</label>
+                <div class="title" id="h-menuD">
+                    Descrição ${qtde}
+                    <i class="far fa-question-circle primaria"></i>
+                </div>
                 <input type="text" name="desc${qtde}" id="desc${qtde}" maxlength="72">
             </div>
             `;
