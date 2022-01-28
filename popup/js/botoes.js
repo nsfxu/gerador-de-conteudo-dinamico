@@ -54,7 +54,10 @@
 
         var html = `
             <div class="box inputbox" id="box-botao${qtde}"> 
-                <label>Botão ${qtde}</label> 
+                <div class="title" id="h-botao">
+                    Botão ${qtde}
+                    <i class="far fa-question-circle primaria"></i>
+                </div>
                 <input type="text" name="botao${qtde}" id="botao${qtde}" maxlength="20"> 
             </div>`;
 

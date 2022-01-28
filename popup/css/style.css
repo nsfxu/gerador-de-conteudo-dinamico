@@ -6,6 +6,10 @@
     --secundaria: #1a2437;
 }
 
+.primaria{
+    color: var(--primaria);
+}
+
 *, *:after, *:before {
     margin: 0;
     padding: 0;
@@ -313,6 +317,42 @@ p {
 .icons-footer > a:hover{
     text-decoration: none;
     color: black;
+}
+
+#h-titulo:hover:after {
+    content: '';
+    position: absolute;
+    background-image: url(/popup/img/quickreply-header.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%; 
+}
+
+#h-corpo:hover:after {
+    content: '';
+    position: absolute;
+    background-image: url(/popup/img/quickreply-body.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%; 
+}
+
+#h-rodape:hover:after {
+    content: '';
+    position: absolute;
+    background-image: url(/popup/img/quickreply-footer.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%; 
+}
+
+#h-botao:hover:after {
+    content: '';
+    position: absolute;
+    background-image: url(/popup/img/button.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%; 
 }
 
 /* ***************** */
